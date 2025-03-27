@@ -1,24 +1,30 @@
 /* Basic Reset */
-body, h1, h2, h3, p, ul, li {
+* {
     margin: 0;
     padding: 0;
-    list-style: none;
+    box-sizing: border-box;
 }
 
+/* Body and Global Styles */
 body {
-    font-family: 'Roboto', sans-serif; /* Use the Google Font */
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
 }
 
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Header Styling */
 .site-header {
     background-color: #333;
-    color: white;
     padding: 20px 0;
 }
 
@@ -28,76 +34,203 @@ body {
     align-items: center;
 }
 
+.site-nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
 .main-nav {
+    list-style: none;
     display: flex;
 }
 
 .main-nav li {
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
 .main-nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
+    font-size: 16px;
 }
 
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
 .hero-section {
-    background-color: #f0f0f0;
-    padding: 50px 0;
-}
-
-.hero-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+    background-color: #3498db;
+    color: white;
 }
 
-.hero-text {
-    flex: 1;
+.hero-section .hero-text {
+    max-width: 50%;
 }
 
-.hero-image {
-    flex: 1;
+.hero-section .hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.responsive-img {
+.hero-section .hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-section .hero-image img {
     max-width: 100%;
     height: auto;
 }
 
-.services-section, .about-preview-section, .testimonials-section {
-    padding: 50px 0;
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+}
+
+.btn-secondary {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #27ae60;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #fff;
+    padding: 60px 0;
+    text-align: center;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
 }
 
-.service-item {
+.service-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.service-item h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.service-item p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* About Section */
+.about-preview-section {
+    background-color: #ecf0f1;
+    padding: 60px 0;
     text-align: center;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+.about-preview-section h2 {
+    font-size: 36px;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    color: white;
+.about-preview-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-.btn-secondary {
-    background-color: #6c757d;
-    color: white;
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: center;
 }
 
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-item p {
+    font-style: italic;
+    color: #555;
+}
+
+.client-name {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Footer */
 .site-footer {
-    background-color: #eee;
-    padding: 20px 0;
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 20px 0;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav li {
+        margin: 10px 0;
+    }
+}
+
+
+ 
+
+
+
+   
+
